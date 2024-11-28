@@ -1,0 +1,123 @@
+/* Gradiente ondulado para a barra de navegação */
+.navbar {
+    background: linear-gradient(90deg, #ffeb99, #99ccff, #ffffff);
+    background-size: 300% 100%;
+    animation: wave 10s infinite;
+}
+
+/* Gradiente animado para o botão de menu */
+.navbar-toggler.custom-toggler {
+    background: linear-gradient(90deg, #d3d3d3, #a9a9a9, #ffffff); /* Gradiente de cinza claro e escuro */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas para o botão */
+}
+
+/* Ícone do botão de menu */
+.navbar-toggler.custom-toggler .navbar-toggler-icon {
+    background-image: linear-gradient(white 40%, transparent 40%, white 60%, transparent 60%, white 80%);
+    width: 24px;
+    height: 24px;
+    display: block;
+    content: "";
+}
+
+/* Animação do gradiente da barra de navegação */
+@keyframes wave {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Nome "Vet Vibe" estilizado */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-brand span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0056b3; /* Azul */
+}
+
+.navbar-brand span .highlight {
+    color: #ffc107; /* Amarelo */
+}
+
+.navbar-brand img {
+    border-radius: 50%;
+}
+
+/* Estilo para o menu expansível (fundo amarelo claro) */
+.navbar-collapse {
+    display: block;
+    position: absolute;
+    top: 60px; /* Ajuste para o menu descer em linha reta */
+    left: 0;
+    right: 0;
+    background-color: #fff6d1; /* Amarelo claro */
+    border: 1px solid black; /* Borda preta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    padding: 15px;
+    z-index: 10;
+}
+
+/* Estilos dos itens do menu expansível */
+.navbar-nav .nav-item {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #000; /* Texto preto */
+    padding: 8px;
+}
+
+.navbar-nav .nav-item:hover {
+    color: #0056b3; /* Azul ao passar o mouse */
+    background-color: #ffd700; /* Amarelo dourado */
+}
+
+/* Divisores no menu dropdown */
+.divider {
+    border-left: 1px solid #ddd;
+    height: 20px;
+    margin: 0 10px;
+}
+
+/* Estilo dos menus suspensos de "Cadastro" e "Cadastro e Login" */
+.dropdown-menu {
+    background-color: #fff6d1; /* Amarelo bem claro */
+    border: 1px solid black; /* Borda preta */
+    font-weight: bold; /* Letras mais grossas */
+}
+
+.dropdown-menu .dropdown-item {
+    color: #000; /* Texto preto */
+    font-size: 1rem;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #ffd700; /* Fundo amarelo dourado ao passar o mouse */
+    color: #fff; /* Texto branco ao passar o mouse */
+}
+
+/* Estilo do menu em dispositivos grandes (largura maior que 1080px) */
+@media (min-width: 1080px) {
+    .navbar-nav .nav-link {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333; /* Preto */
+        text-shadow: 1px 1px 2px #ffc107; /* Sombras amarelas */
+        transition: color 0.3s, text-shadow 0.3s;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #0056b3; /* Azul ao passar o mouse */
+        text-shadow: 2px 2px 4px #99ccff; /* Sombras azuis */
+    }
+}
